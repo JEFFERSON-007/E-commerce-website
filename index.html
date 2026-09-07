@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MAISON — considered objects for everyday living." />
+  <title>MAISON — Objects with intention</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement-bar">
+    <p>Complimentary shipping on orders over $150</p>
+    <button class="announcement-close" aria-label="Close announcement">&times;</button>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand" href="#top" aria-label="MAISON home">MAISON<span>.</span></a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop</a>
+        <a href="#collections">Collections</a>
+        <a href="#story">Our story</a>
+        <a href="#journal">Journal</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn search-toggle" aria-label="Open search"><span class="icon icon-search"></span></button>
+        <button class="icon-btn" aria-label="View account"><span class="icon icon-user"></span></button>
+        <button class="icon-btn cart-toggle" aria-label="Open shopping bag"><span class="icon icon-bag"></span><span class="cart-count">0</span></button>
+      </div>
+    </div>
+    <div class="search-panel">
+      <div class="container search-inner">
+        <span class="icon icon-search"></span>
+        <input type="search" id="search-input" placeholder="Search objects, materials, or collections" aria-label="Search products" />
+        <button class="search-clear" aria-label="Clear search">&times;</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content container">
+        <p class="eyebrow">The autumn edit / 2024</p>
+        <h1>Objects with<br /><em>intention.</em></h1>
+        <p class="hero-copy">A quiet collection of considered pieces for the rituals that make a home.</p>
+        <a class="button button-dark" href="#shop">Explore the collection <span>↗</span></a>
+      </div>
+      <div class="hero-note"><span>01</span><span class="hero-line"></span><span>04</span></div>
+      <a class="scroll-cue" href="#shop"><span>Scroll to explore</span><span class="scroll-arrow">↓</span></a>
+    </section>
+
+    <section class="intro-section container" id="story">
+      <div class="intro-title"><p class="eyebrow">The MAISON perspective</p><h2>Less, but<br /><em>better.</em></h2></div>
+      <div class="intro-copy"><p>We believe the things we live with should be made to last, feel good in the hand, and earn their place over time.</p><a href="#collections" class="text-link">Discover our philosophy <span>→</span></a></div>
+    </section>
+
+    <section class="category-section container" id="collections">
+      <div class="section-heading"><div><p class="eyebrow">Shop by mood</p><h2>Find your <em>everyday.</em></h2></div><a class="text-link desktop-only" href="#shop">View all pieces <span>→</span></a></div>
+      <div class="category-grid">
+        <a href="#shop" class="category-card category-card-large" data-category-link="Home">
+          <img class="category-image" src="images/home.jpg" alt="Warm, neutral living room with a sculptural chair" /><div class="category-shade"></div><div class="category-overlay"><span>01</span><h3>For the home</h3><p>Warmth in the details</p></div>
+        </a>
+        <a href="#shop" class="category-card" data-category-link="Wear">
+          <img class="category-image" src="images/wear.jpg" alt="Clothing arranged in a softly lit wardrobe" /><div class="category-shade"></div><div class="category-overlay"><span>02</span><h3>To be worn</h3><p>Everyday, elevated</p></div>
+        </a>
+        <a href="#shop" class="category-card" data-category-link="Rituals">
+          <img class="category-image" src="images/rituals.jpg" alt="Green plants and soft home details in a living room" /><div class="category-shade"></div><div class="category-overlay"><span>03</span><h3>Daily rituals</h3><p>Small moments, made better</p></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="product-section container" id="shop">
+      <div class="section-heading product-heading"><div><p class="eyebrow">Curated for now</p><h2>New <em>arrivals.</em></h2></div><div class="product-controls"><div class="filter-tabs"><button class="filter-tab active" data-filter="All">All</button><button class="filter-tab" data-filter="Home">Home</button><button class="filter-tab" data-filter="Wear">Wear</button><button class="filter-tab" data-filter="Rituals">Rituals</button></div><label class="sort-wrap">Sort <select id="sort-select" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label></div></div>
+      <div class="active-filter-row"><span id="results-count">06 pieces</span><button class="clear-filters">Clear filters <span>&times;</span></button></div>
+      <div class="product-grid" id="product-grid"></div>
+      <div class="empty-state" id="empty-state"><span>✦</span><h3>Nothing found</h3><p>Try another search or browse the full collection.</p><button class="button button-outline reset-products">View all pieces</button></div>
+    </section>
+
+    <section class="quote-section" id="journal">
+      <div class="quote-mark">“</div><blockquote>Good design is a quiet<br />conversation with time.</blockquote><p class="quote-source">— The MAISON journal, issue 04</p>
+    </section>
+
+    <section class="editorial-section container">
+      <img class="editorial-image" src="images/editorial.jpg" alt="Bright home interior with natural materials" />
+      <div class="editorial-content"><p class="eyebrow">A slower approach</p><h2>Made for the<br /><em>long haul.</em></h2><p>From organic cotton to hand-finished ceramics, each material is chosen for how it ages, not just how it arrives.</p><a href="#story" class="button button-dark">Our materials <span>↗</span></a></div>
+    </section>
+
+    <section class="newsletter-section">
+      <div class="newsletter-inner container"><div><p class="eyebrow">The letter / Once a month</p><h2>Notes from <em>home.</em></h2></div><form class="newsletter-form" id="newsletter-form"><label for="email">A little inspiration, delivered.</label><div class="input-row"><input type="email" id="email" placeholder="Your email address" required /><button type="submit" aria-label="Subscribe">→</button></div><p class="form-message" aria-live="polite"></p></form></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top"><a class="brand footer-brand" href="#top">MAISON<span>.</span></a><div class="footer-links"><div><h4>Explore</h4><a href="#shop">Shop all</a><a href="#collections">Collections</a><a href="#story">Our story</a></div><div><h4>Help</h4><a href="#">Shipping & returns</a><a href="#">Care guide</a><a href="#">Contact us</a></div><div><h4>Follow along</h4><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">Are.na</a></div></div></div>
+    <div class="container footer-bottom"><span>© 2024 MAISON STUDIO</span><span>Designed for everyday living</span><a href="#top">Back to top ↑</a></div>
+  </footer>
+
+  <aside class="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer-header"><h2>Your bag <span class="drawer-count">(0)</span></h2><button class="drawer-close" aria-label="Close shopping bag">&times;</button></div>
+    <div class="cart-items"></div>
+    <div class="cart-empty"><div class="empty-bag-icon">♡</div><h3>Your bag is waiting</h3><p>Good things take time, but not too much.</p><button class="button button-dark continue-shopping">Continue shopping</button></div>
+    <div class="cart-footer"><div class="subtotal"><span>Subtotal</span><strong>$0.00</strong></div><p>Shipping and taxes calculated at checkout.</p><button class="button button-dark checkout-btn">Proceed to checkout <span>→</span></button></div>
+  </aside>
+  <div class="drawer-backdrop"></div>
+
+  <div class="toast" role="status"><span class="toast-icon">✓</span><span class="toast-message">Added to your bag</span></div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
